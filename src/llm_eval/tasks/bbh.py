@@ -127,7 +127,7 @@ class BBH:
         all_datasets = []
         for subset in bbh_subsets:
             subset_dataset = datasets.load_dataset("lukaemon/bbh", subset, split="test")
-            subset_dataset = subset_dataset.add_column("category", ["bbh_" + subset] * len(subset_dataset)).cast_column("category", Value("string"))
+            subset_dataset = subset_dataset.add_column("category", ["bbh_" + subset] * len(subset_dataset))
             all_datasets.append(subset_dataset)
 
         dataset = datasets.concatenate_datasets(all_datasets)
