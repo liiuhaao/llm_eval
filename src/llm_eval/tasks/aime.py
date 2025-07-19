@@ -14,8 +14,8 @@ class AIME:
     def build(sample):
         system_prompt = 'You are a helpful assistant. Think step by step and then finish your answer with "answer is X" where X is the numerical value of the answer.'
 
-        question = sample["question"]
-        truth = sample["answer_number"]
+        question = sample["problem"]
+        truth = sample["answer"]
 
         user_prompt = question
 
