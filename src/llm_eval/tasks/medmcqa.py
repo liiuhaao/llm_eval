@@ -17,7 +17,7 @@ class MedMCQA:
         question = sample["question"]
         options = [sample["opa"], sample["opb"], sample["opc"], sample["opd"]]
         truth = chr(65 + int(sample["cop"]))
-        category = f"medmcqa_{sample["subject_name"]}"
+        category = f"medmcqa_{sample['subject_name']}"
 
         input = f"{question}\n\n"
         for i, option in enumerate(options):
