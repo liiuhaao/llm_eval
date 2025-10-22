@@ -12,3 +12,5 @@ wheels/
 /data/
 test.ipynb
 test.py
+
+tmp/

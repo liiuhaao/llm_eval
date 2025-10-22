@@ -34,8 +34,8 @@ class ARC:
         category = sample["category"]
 
         input = f"{question}\n"
-        for l, t in zip(options["label"], options["text"]):
-            input += f"{l}. {t}\n"
+        for i, t in enumerate(options):
+            input += f"{chr(65+i)}. {t}\n"
         input += "\n"
         user_prompt = input
 
